@@ -1,3 +1,3 @@
 export const base = {
-    domain: "http://192.168.1.34:1337"
+    domain: "http://185.246.89.55:1337"
 }
