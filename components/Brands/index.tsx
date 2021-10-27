@@ -65,7 +65,7 @@ export const Brands = () => {
         <Slider {...settings}>
             {
                 !isLoading && data.map(item => {
-                    return <div>
+                    return <div key={item.id}>
                         <div className='item'>
                             <img src={`${base.domain}${item.image.url}`} style={{width: "70%"}} />
                         </div>

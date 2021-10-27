@@ -42,7 +42,7 @@ export const Gallery = () => {
             <Row gutter={[10,10]}>
                 {
                     !isLoading && data.map(item => {
-                        return <Col span={8}><HoverCardV3 data={item}/></Col>
+                        return <Col span={8} key={item.id}><HoverCardV3 data={item}/></Col>
                     })
                 }
             </Row>
@@ -51,7 +51,7 @@ export const Gallery = () => {
             <Slider {...settings}>
                 {
                     !isLoading && data.map(item => {
-                        return <div><HoverCardV3 data={item}/></div>
+                        return <div key={item.id}><HoverCardV3 data={item}/></div>
                     })
                 }
             </Slider>
