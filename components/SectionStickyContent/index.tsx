@@ -11,7 +11,8 @@ export const SectionStickyContent = () => {
         const onScroll: EventListener = (event: Event) => { // <-- DOM-EventListener
             const el = document.getElementById("section-sticky-content")?.getBoundingClientRect();
             const top = el!.y;
-            const bottom = el!.bottom - event.target?.getBoundingClientRect()!.height;
+            const target = event.target as HTMLElement;
+            const bottom = el!.bottom - target?.getBoundingClientRect()!.height;
             
             let lineFixedTop = (lineFixed)? lineFixed.top : top > 0? 1 : top < 0? -1 : 0;
             let lineFixedBottom = (lineFixed)? lineFixed.bottom : bottom > 0? 1 : bottom < 0? -1 : 0;
