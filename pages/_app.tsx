@@ -3,7 +3,7 @@ import {FixedSideHeader, Content} from '../components'
 import {Row, Col, } from 'antd'
 import { Provider } from 'react-redux';
 import {store} from '../app/store';
-import '../css/antd.less'
+import '../css/antd-dark.less'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
