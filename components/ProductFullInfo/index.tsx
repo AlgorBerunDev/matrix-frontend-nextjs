@@ -1,31 +1,46 @@
 import React from "react";
 import { Col, Row, Tabs } from "antd";
+import { IProduct } from "../../features/product/index";
+import ReactMarkdown from 'react-markdown';
 
 const { TabPane } = Tabs;
 
-export const ProductFullInfo = () => (
+export const ProductFullInfo = ({
+  data,
+  isLoading,
+}: {
+  data: IProduct | null;
+  isLoading: boolean;
+}) => (
   <div>
     <Tabs defaultActiveKey="1" size="large">
       <TabPane tab="ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ" key="1">
-        <Row gutter={[5, 5]}>
-          <Col sm={4}>
-            <div className="info-header">Назначение:</div>
-          </Col>
-          <Col sm={12}>
-            <div className="info-description">профессиональные</div>
-          </Col>
-        </Row>
-        <Row gutter={[5, 5]}>
-          <Col sm={4}>
-            <div className="info-header">Показания консоли:</div>
-          </Col>
-          <Col sm={12}>
-            <div className="info-description">время суток, истекшее время, оставшееся время, общая продолжительность программы, расстояние (км. или мили), калории, кал/ч., скорость, темп, средний темп, преодоленный подъем, угол наклона, ЧСС, макс. ЧСС, метабол. ед-цы, динамич. профиль</div>
-          </Col>
-        </Row>
+        {!isLoading &&
+          data?.product_properties.map((item) => {
+            return (
+              <Row gutter={[5, 5]} key={item.id}>
+                <Col sm={4}>
+                  <div className="info-header">{item.title}</div>
+                </Col>
+                <Col sm={12}>
+                  <div className="info-description">
+                    <ReactMarkdown>
+                      {
+                        item.description
+                      }
+                    </ReactMarkdown>
+                  </div>
+                </Col>
+              </Row>
+            );
+          })}
       </TabPane>
       <TabPane tab="ОПИСАНИЯ" key="2">
-        Content of Tab Pane 2
+        <ReactMarkdown>
+          {
+            !isLoading && data?.full_info || ""
+          }
+        </ReactMarkdown>
       </TabPane>
     </Tabs>
     <style jsx>{`

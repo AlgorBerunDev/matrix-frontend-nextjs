@@ -50,23 +50,21 @@ export const HoverCardV3 = ({data}: {data: IUniqueProduct}) => {
                 padding-right: 30%;
             }
             .hover-card-v3:hover .hover {
+                width: 100vw;
                 height: 100%;
                 background-color: rgba(0,0,0,0.7);
             }
             .hover-card-v3:hover .descriptions {
                 display: block;
             }
-            @media screen and (max-width: 600px) {
-                .headers {
-                    font-size: 0.7em;
-                }
-                .descriptions ul {
-                    width: 50%;
-                    padding-left: 10px;
-                }
-                .descriptions ul li {
-                    font-size: 1.2em;
-                }
+            .descriptions ul {
+                padding-left: 10px;
+            }
+            .descriptions ul li {
+                font-size: 1em;
+            }
+            @media screen and (min-width: 768px) {
+                
             }
         `}</style>
     </div>

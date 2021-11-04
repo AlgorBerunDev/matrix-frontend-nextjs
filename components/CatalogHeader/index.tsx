@@ -1,26 +1,28 @@
 import React from 'react'
 import { Breadcrumb, Col, Row } from 'antd';
 import { HomeFilled, AppstoreFilled } from '@ant-design/icons';
+import { ICatalog } from '../../features/catalog/index';
+import { base } from '../../features/config';
 
-const CatalogHeader = ({data}: any) => {
+const CatalogHeader = ({data}: {data: ICatalog | null}) => {
 
   return (
       <>
         <div className="catalog-header">
             <div className='catalog-header-content'>
                 <div className='header-main'>
-                    <div className='header'>Lorem, ipsum dolor.</div>
+                    <div className='header'>{data?.header}</div>
                     <Breadcrumb>
                         <Breadcrumb.Item href="">
                             <HomeFilled />
                         </Breadcrumb.Item>
                         <Breadcrumb.Item>
                             <AppstoreFilled />
-                            <span>Cardio</span>
+                            <span>{data?.header}</span>
                         </Breadcrumb.Item>
                     </Breadcrumb>
                 </div>
-                <img src="/images/Climbmill_C50_XUR_Hero_1440x.png" className='catalog-header-image' alt="." />
+                <img src={`${base.domain}${data?.image.formats?.medium?.url || data?.image.url}`} className='catalog-header-image' alt="." />
             </div>
             
         </div>

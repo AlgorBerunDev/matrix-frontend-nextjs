@@ -1,22 +1,30 @@
 import { Col, Row } from "antd";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Footer } from "../../components/Footer";
 import { ProductFullInfo } from "../../components/ProductFullInfo";
 import { PorductImage } from "../../components/ProductImages";
 import { ProductShortInfo } from "../../components/ProductShortInfo";
+import { useGetProductQuery } from "../../features/product";
+import { IProduct } from '../../features/product/index';
+import { useRouter } from 'next/router';
 
 const Product = () => {
+  const router = useRouter();
+  const {data = null, isLoading } = useGetProductQuery(Number(router.query.id));
+  
+  if(isLoading) return <h1>Loading...</h1>
+  if(!data) return <h1>Not Found</h1>
   return (
     <>
       <br />
       <br />
       <br />
       <Row>
-        <Col sm={24} md={10}>
-          <PorductImage />
+        <Col xs={24} sm={24} md={10}>
+          <PorductImage  data={data?.images} isLoading={isLoading}/>
         </Col>
-        <Col sm={24} md={10}>
-          <ProductShortInfo />
+        <Col xs={24} sm={24} md={10}>
+          <ProductShortInfo data={data} isLoading={isLoading} />
         </Col>
       </Row>
       <br />
@@ -24,7 +32,7 @@ const Product = () => {
       <br />
       <br />
       <div style={{ padding: 20 }}>
-        <ProductFullInfo />
+        <ProductFullInfo data={data} isLoading={isLoading}/>
       </div>
 
       <Footer />

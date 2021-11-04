@@ -12,6 +12,8 @@ import { officialsApi } from '../features/officials';
 import { uniqueApi } from '../features/unique-products';
 import { brandApi } from '../features/brands';
 import { footerApi } from '../features/footer';
+import { productApi } from '../features/product';
+import { catalogApi } from '../features/catalog';
 
   export const store = configureStore({
     reducer: {
@@ -24,6 +26,8 @@ import { footerApi } from '../features/footer';
         [uniqueApi.reducerPath]: uniqueApi.reducer,
         [brandApi.reducerPath]: brandApi.reducer,
         [footerApi.reducerPath]: footerApi.reducer,
+        [productApi.reducerPath]: productApi.reducer,
+        [catalogApi.reducerPath]: catalogApi.reducer,
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(
       navigationApi.middleware,
@@ -32,6 +36,8 @@ import { footerApi } from '../features/footer';
       uniqueApi.middleware,
       brandApi.middleware,
       footerApi.middleware,
+      productApi.middleware,
+      catalogApi.middleware
     )
   });
   

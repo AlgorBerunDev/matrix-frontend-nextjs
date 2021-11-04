@@ -22,6 +22,7 @@ export const Content = (props: any) => {
             }
             @media screen and (max-width: 572px) {
                 .scroll-content {
+                    padding-top: 7vh;
                     top: 7vh;
                     height: 93vh;
                 }
