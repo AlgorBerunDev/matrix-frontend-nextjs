@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import CatalogHeader from "../../components/CatalogHeader/index";
 import CatalogFilter from "../../components/CatalogFilter/index";
 import CatalogGrid from "../../components/CatalogGrid/index";
@@ -11,11 +11,17 @@ import {
 import { useRouter } from "next/router";
 const CatalogIndex = () => {
   const router = useRouter();
-
+  const [filter, setFilter] = useState("");
   const catalog = useGetCatalogQuery(Number(router.query.id));
   const catalogProducts = useGetCatalogProductQuery(Number(router.query.id));
   if (catalog.isError || catalog.isLoading) return <h1>Loading....</h1>;
-
+  useEffect(() => {
+    let filters: any = router.query!.filter;
+    let resultFilter: any = filters.split(",").map((item: any) => {
+      return "filter_types[]="+item;
+    }).join("&");
+    console.log(resultFilter);
+  }, [router]);
   return (
     <>
       <Row gutter={[0, 0]}>

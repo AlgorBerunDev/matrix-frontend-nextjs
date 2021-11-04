@@ -70,7 +70,7 @@ export const Navigation = () => {
         visible={isOpen}
         getContainer={false}
         width={"100%"}
-        style={{ position: "absolute"}}
+        style={{ position: "absolute" }}
       >
         <div className="social-links">
           <Link href={"/"}>
@@ -101,9 +101,7 @@ export const Navigation = () => {
             </div>
           </Link>
         </div>
-        <div
-          className="phone"
-        >
+        <div className="phone">
           <Button
             type="link"
             href="tel:+998909022262"
@@ -218,7 +216,6 @@ export const Navigation = () => {
           color: #eaa83c;
         }
         .category:hover {
-          
         }
         .subcategory-item {
           color: #eaa83c;
