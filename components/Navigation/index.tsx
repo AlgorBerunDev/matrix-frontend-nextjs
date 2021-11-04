@@ -142,7 +142,6 @@ export const Navigation = () => {
           </Col>
           <Col xs={0} sm={0} md={16}>
             <div className="category-items">
-              <h1>LLLLLL</h1>
               <Row gutter={[5, 40]}>
                 {categoryItems?.map((item) => {
                   return (
