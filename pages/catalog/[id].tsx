@@ -15,13 +15,13 @@ const CatalogIndex = () => {
   const catalog = useGetCatalogQuery(Number(router.query.id));
   const catalogProducts = useGetCatalogProductQuery(Number(router.query.id));
   if (catalog.isError || catalog.isLoading) return <h1>Loading....</h1>;
-  useEffect(() => {
-    let filters: any = router.query!.filter;
-    let resultFilter: any = filters.split(",").map((item: any) => {
-      return "filter_types[]="+item;
-    }).join("&");
-    console.log(resultFilter);
-  }, [router]);
+  // useEffect(() => {
+  //   let filters: any = router.query!.filter;
+  //   let resultFilter: any = filters.split(",").map((item: any) => {
+  //     return "filter_types[]="+item;
+  //   }).join("&");
+  //   console.log(resultFilter);
+  // }, [router]);
   return (
     <>
       <Row gutter={[0, 0]}>
