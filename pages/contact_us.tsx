@@ -1,6 +1,8 @@
 import React from 'react'
-import { Form, Input, Button, Select, Row, Col } from 'antd';
+import { Form, Input, Button, Select, Row, Col, message } from 'antd';
+import router from 'next/router';
 import { Footer } from '../components/Footer';
+import { base } from '../features/config';
 
 const { Option } = Select;
 
@@ -13,23 +15,28 @@ const tailLayout = {
 };
 
 const ContactUs = () => {
-    const [form] = Form.useForm();
-
-  const onGenderChange = (value: string) => {
-    switch (value) {
-      case 'male':
-        form.setFieldsValue({ note: 'Hi, man!' });
-        return;
-      case 'female':
-        form.setFieldsValue({ note: 'Hi, lady!' });
-        return;
-      case 'other':
-        form.setFieldsValue({ note: 'Hi there!' });
-    }
-  };
+  const [form] = Form.useForm();
 
   const onFinish = (values: any) => {
-    console.log(values);
+    const hide = message.loading("Ваше сообщение отправляется");
+    fetch(base.domain+"/messages",
+    {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(values)
+    })
+    .then(res => res.json())
+    .then(data => {
+      hide();
+      
+      message.success("Ваше сообщение успешно отправлено!");
+      router.push("/");
+    })
+    .catch(e => {
+      message.error(e.message)
+    })
   };
 
   const onReset = () => {

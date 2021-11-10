@@ -45,8 +45,9 @@ export const SectionStickyContent = () => {
         </div>
         <style jsx>{`
             .content {
-                padding-top: 400px;
-                padding-bottom: 400px;
+                padding-top: 40px;
+                padding-bottom: 300px;
+                margin-top: -300px;
                 text-align: center;
             }
             .headers {
