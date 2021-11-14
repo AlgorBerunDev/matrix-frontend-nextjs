@@ -99,7 +99,7 @@ export const Brands = () => {
             }
             .description {
                 font-size: 1.7em;
-                color: grey;
+                color: black;
                 font-family: BaseLight;
                 width: 70%;
                 margin: 0 auto;
