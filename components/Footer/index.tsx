@@ -10,7 +10,7 @@ export const Footer = () => {
         <Row>
             <Col xs={24} sm={24} md={6}>
                 <div className='info1'>
-                    <img src="/icons/header_matrix_logo_horizontal.png" style={{height: "20px"}} />
+                    <img src="/icons/header_matrix_logo_horizontal.png" style={{height: "20px"}} alt="." />
                     <br />
                     <br />
                     <p>

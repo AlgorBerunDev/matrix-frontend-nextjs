@@ -10,7 +10,7 @@ export const SectionV1 = () => {
         <Row>
             <Col sm={24} md={18}>
                 <div className='console-bg'>
-                    <img src='/images/pict.png' style={{width: "100%"}} />
+                    <img src='/images/pict.png' alt="." style={{width: "100%"}} />
                 </div>
             </Col>
             <Col sm={24} md={6}>

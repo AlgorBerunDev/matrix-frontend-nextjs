@@ -12,7 +12,7 @@ export interface ICard {
 }
 export const HoverCardV1 = ({data}: {data: ICard}) => {
     return <div className='card'>
-        <img src={`${base.domain}${data.image.formats.medium.url}`}  style={{width: "100%"}}/>
+        <img src={`${base.domain}${data.image.formats.medium.url}`} alt="." style={{width: "100%"}}/>
         <div className='hover-effect'>
             <div className='hover-content'>
                 <div className='city'>{data.city}</div>

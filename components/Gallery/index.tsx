@@ -36,7 +36,7 @@ export const Gallery = () => {
         <div className='gallery-header'>
             УНИКАЛЬНЫЕ ПРОДУКТЫ
             <br />
-            <img src="/icons/header_matrix_logo_horizontal.png" style={{height: 20}} />
+            <img src="/icons/header_matrix_logo_horizontal.png" alt="." style={{height: 20}} />
         </div>
         <div className="gallery">
             <Row gutter={[10,10]}>

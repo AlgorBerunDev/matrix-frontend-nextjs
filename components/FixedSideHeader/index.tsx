@@ -47,7 +47,7 @@ export const FixedSideHeader = () => {
                 <Col sm={8} md={24} lg={24} xl={24} xxl={24}><div className='content-center'><Button shape='circle' className='social' icon={<PhoneFilled/>} /></div></Col>
                 <Col sm={8} md={24} lg={24} xl={24} xxl={24}><div className='content-center'><Button shape='circle' className='social' icon={<FacebookFilled/>} /></div></Col>
                 <Col sm={8} md={24} lg={24} xl={24} xxl={24}><div className='content-center'><Button shape='circle' className='social' icon={<InstagramFilled/>} /></div></Col>
-                <Col sm={8} md={24} lg={24} xl={24} xxl={24}><div className='content-center'><Button shape='circle' className='social' icon={<Icon component={() => (<img src="/icons/free-icon-telegram-226253.png"/>)} />} /></div></Col>
+                <Col sm={8} md={24} lg={24} xl={24} xxl={24}><div className='content-center'><Button shape='circle' className='social' icon={<Icon component={() => (<img alt="img" src="/icons/free-icon-telegram-226253.png"/>)} />} /></div></Col>
             </Row>
         </div>
         <style jsx>{`

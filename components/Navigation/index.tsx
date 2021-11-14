@@ -94,6 +94,7 @@ export const Navigation = () => {
                 component={() => (
                   <img
                     style={{ width: 24, transform: "translateY(-6px)" }}
+                    alt="."
                     src="/icons/telegram-48.png"
                   />
                 )}

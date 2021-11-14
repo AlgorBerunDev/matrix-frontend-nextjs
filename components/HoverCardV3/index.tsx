@@ -6,7 +6,7 @@ import { IUniqueProduct } from '../../features/unique-products'
 
 export const HoverCardV3 = ({data}: {data: IUniqueProduct}) => {
     return <div className='hover-card-v3'>
-        <img src={`${base.domain}${data?.image?.url}`} className='card-image' />
+        <img src={`${base.domain}${data?.image?.url}`} alt="." className='card-image' />
         <div className='hover'>
             <div className="headers">
                 <ReactMarkdown>{data.children[0].header}</ReactMarkdown>

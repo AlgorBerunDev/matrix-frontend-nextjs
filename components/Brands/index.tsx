@@ -2,6 +2,8 @@ import React from 'react'
 import Slider from "react-slick";
 import { useGetBrandsQuery } from '../../features/brands';
 import { base } from '../../features/config';
+import Image from 'next/image';
+
 export const Brands = () => {
     const {data = [], isLoading} = useGetBrandsQuery(0);
 
@@ -67,7 +69,7 @@ export const Brands = () => {
                 !isLoading && data.map(item => {
                     return <div key={item.id}>
                         <div className='item'>
-                            <img src={`${base.domain}${item.image.url}`} style={{width: "70%"}} />
+                                <Image src={`${base.domain}${item.image.url}`} width={200} height={200} alt="Image load error" />
                         </div>
                     </div>
                 })

@@ -39,6 +39,7 @@ export const SectionProjecting: React.FC<{ data?: ProjectingType }> = ({
                   <img
                     src={`${base.domain}${item.formats.large.url}`}
                     style={{ width: "100%" }}
+                    alt="."
                   />
                 </div>
               ))}
