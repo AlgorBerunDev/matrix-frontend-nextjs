@@ -95,7 +95,7 @@ export const FixedSideHeader = () => {
                 border-color: red;
                 outline-color: green;
             }
-            @media screen and (max-width: 576px) {
+            @media screen and (max-width: 768px) {
                 .fixed-side-header {
                     width: 100vw;
                     height: 7vh;

@@ -12,12 +12,12 @@ export const PorductImage = ({data, isLoading}: {data?: IImage[], isLoading: boo
         <div style={{width: 50, height: 50}}>
           <Image
             preview={false}
-            src={`${base.domain}${data? data[i].formats.medium.url : ""}`}
+            src={`${base.domain}${data![i]?.formats?.medium?.url || data![i].url}`}
             style={{
               width: "50px",
               height: "50px",
               objectFit: "cover",
-              backgroundColor: "#999999",
+              backgroundColor: "#ffffff",
             }}
           />
         </div>
@@ -40,8 +40,8 @@ export const PorductImage = ({data, isLoading}: {data?: IImage[], isLoading: boo
               <div key={item.id}>
                 <Image
                   preview={false}
-                  src={`${base.domain}${item.formats.medium.url}`}
-                  style={{ backgroundColor: "#999999"}}
+                  src={`${base.domain}${item?.formats?.medium?.url || item?.url }`}
+                  style={{ backgroundColor: "#ffffff"}}
                 />
               </div>
             )

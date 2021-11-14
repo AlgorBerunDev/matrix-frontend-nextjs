@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Card, Image } from "antd";
+import { Card, Image, Divider } from "antd";
 import { ICatalogProduct } from "../../features/catalog/index";
 import { base } from "../../features/config";
 
@@ -9,19 +9,35 @@ const CatalogProductCard = ({ data }: { data: ICatalogProduct }) => {
   return (
     <div className="catalog-product-card">
       <Card
-        style={{ width: 300, color: "yellow", background: "#444" }}
+        style={{
+          width: 300,
+          color: "black",
+          background: "#ffffff",
+          borderRadius: 5,
+        }}
         type="inner"
         cover={
-          <img
-            alt="example"
-            src={`${base.domain}${
-              data.image.formats?.medium?.url || data.image.url
-            }`}
-            className="product-image-background"
-          />
+          <div
+            style={{
+              width: "100%",
+              height: 300,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              boxSizing: "border-box"
+            }}
+          >
+            <Image
+              preview={false}
+              alt="example"
+              src={`${base.domain}${
+                data.image.formats?.medium?.url || data.image.url
+              }`}
+            />
+          </div>
         }
       >
-        <Link href={`/product/${data.id}`}>
+        <Link href={`/product/${data.product.id}`}>
           <a className="card-header">{data.title}</a>
         </Link>
         <br />
@@ -59,9 +75,10 @@ const CatalogProductCard = ({ data }: { data: ICatalogProduct }) => {
         }
         .card-header {
           color: #eaa83c;
-          /* color: white; */
+          color: #444444;
           font-family: BaseBold;
           font-size: 1.2em;
+          text-decoration: underline;
         }
         .console-link-item {
           width: 30px;
@@ -74,34 +91,18 @@ const CatalogProductCard = ({ data }: { data: ICatalogProduct }) => {
           cursor: pointer;
         }
         .product-image-background {
-          background: rgb(93, 93, 93);
-          background: -moz-linear-gradient(
-            124deg,
-            rgba(93, 93, 93, 1) 13%,
-            rgba(69, 69, 69, 1) 74%,
-            rgba(87, 86, 86, 1) 100%
-          );
-          background: -webkit-linear-gradient(
-            124deg,
-            rgba(93, 93, 93, 1) 13%,
-            rgba(69, 69, 69, 1) 74%,
-            rgba(87, 86, 86, 1) 100%
-          );
-          background: linear-gradient(
-            124deg,
-            rgba(93, 93, 93, 1) 13%,
-            rgba(69, 69, 69, 1) 74%,
-            rgba(87, 86, 86, 1) 100%
-          );
-          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5d5d5d",endColorstr="#575656",GradientType=1);
+          background-color: white;
+          width: 100%;
+          height: 300px;
         }
         .catalog-product-console-image {
-            width: 50px;
+          width: 50px;
+          display: inline-block;
         }
         .catalog-product-console-image:hover {
           width: 50px;
           background-color: #cccccc;
-          border-radius: 3px; 
+          border-radius: 3px;
           cursor: pointer;
           box-sizing: border-box;
         }
