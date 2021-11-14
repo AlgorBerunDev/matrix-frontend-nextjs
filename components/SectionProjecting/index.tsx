@@ -37,7 +37,7 @@ export const SectionProjecting: React.FC<{ data?: ProjectingType }> = ({
               {data?.images?.map((item: IImage) => (
                 <div key={item.id}>
                   <img
-                    src={`${base.domain}${item.formats?.large?.url && item.url}`}
+                    src={`${base.domain}${item.formats?.large?.url || item.url}`}
                     style={{ width: "100%" }}
                     alt="."
                   />
