@@ -4,6 +4,7 @@ import { IFilterGroup, IFilter } from "../../features/catalog/index";
 import Router from 'next/router';
 
 
+
 const CatalogFilter = ({ data }: { data: IFilter | null }) => {
   const [selected, setSelected] = useState([])
   const [disabledFilters, setDisabledFilters] = useState<number[]>([]);
@@ -16,13 +17,13 @@ const CatalogFilter = ({ data }: { data: IFilter | null }) => {
     })
   }
   useEffect(() => {
-    const filters = selected.filter(item => disabledFilters.indexOf(item) === -1);
-    console.log(Router.asPath)
-    const filterPath = '/catalog/'+Router.query.id+"?filter="+filters.join(",")
-    if(Router.asPath != filterPath) {
-      Router.push(filterPath);
-    }
-    
+    // const filters = selected.filter(item => disabledFilters.indexOf(item) === -1);
+    // console.log(Router.asPath)
+    // const filterPath =  '/catalog/'+Router.query.id+"?filter="+filters.join(",")
+    // if(Router.asPath != filterPath) {
+    //   Router.push(filterPath);
+    // }
+    console.log(Router.query)
   }, [selected]);
   useEffect(() => {
     let disabledFiltersResult: any = data?.filter_groups.map(item => {
