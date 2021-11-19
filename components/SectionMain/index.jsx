@@ -9,6 +9,7 @@ export const SectionMain = (props) => {
     <div className="section-main" id="id">
       <Row>
         <Col xs={24} sm={24} md={18} lg={10}>
+          <h3 className="phones"> КОНТАКТЫ <br /> +998 95 196 6663 <br /> +998 90 902 2262</h3>
           <h1 className="header">ОДИН БРЕНД ВСЕ ГРАНИ ФИТНЕСА</h1>
           <ReactTypingEffect
             speed={40}
@@ -51,10 +52,18 @@ export const SectionMain = (props) => {
           padding: 10px;
         }
         .header {
-          margin-top: 100px;
           font-size: 2.3em;
           color: #eaa83c;
           text-shadow: 0px 0px 2px orange;
+        }
+        .phones {
+          margin-top: 100px;
+          font-size: 1.2em;
+          color: #eaa83c;
+          text-shadow: 0px 0px 2px orange;
+          border-left: 4px solid #eaa83c;
+          padding-left: 10px;
+          margin-left: 25px;
         }
         .header-content {
           font-size: 2em;
@@ -67,10 +76,14 @@ export const SectionMain = (props) => {
         .header-content {
           font-size: 1.3em;
         }
+        
         @media only screen and (min-width: 768px) {
           .header {
-            margin-top: 100px;
             font-size: 4em;
+          }
+          .phones {
+            margin-top: 100px;
+            font-size: 2em;
           }
           .header-content {
             font-size: 2em;
