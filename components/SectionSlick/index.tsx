@@ -45,14 +45,16 @@ export const SectionSlick = (props: ISectionSlick) => {
               settings: {
                 slidesToShow: 2,
                 slidesToScroll: 2,
-                initialSlide: 2
+                initialSlide: 2,
+                dots: false,
               }
             },
             {
               breakpoint: 480,
               settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                dots: false,
               }
             }
           ]
