@@ -1431,9 +1431,9 @@
     "glob-to-regexp" "^0.3.0"
 
 "@napi-rs/triples@^1.0.3":
-  "integrity" "sha512-jDJTpta+P4p1NZTFVLHJ/TLFVYVcOqv6l8xwOeBKNPMgY/zDYH/YH7SJbvrr/h1RcS9GzbPcLKGzpuK9cV56UA=="
-  "resolved" "https://registry.npmjs.org/@napi-rs/triples/-/triples-1.0.3.tgz"
-  "version" "1.0.3"
+  "integrity" "sha512-XQr74QaLeMiqhStEhLn1im9EOMnkypp7MZOwQhGzqp2Weu5eQJbpPxWxixxlYRKWPOmJjsk6qYfYH9kq43yc2w=="
+  "resolved" "https://registry.npmjs.org/@napi-rs/triples/-/triples-1.1.0.tgz"
+  "version" "1.1.0"
 
 "@next/env@11.1.2":
   "integrity" "sha512-+fteyVdQ7C/OoulfcF6vd1Yk0FEli4453gr8kSFbU8sKseNSizYq6df5MKz/AjwLptsxrUeIkgBdAzbziyJ3mA=="
@@ -3844,9 +3844,9 @@
   "version" "1.0.0"
 
 "caniuse-lite@^1.0.30001109", "caniuse-lite@^1.0.30001125", "caniuse-lite@^1.0.30001202", "caniuse-lite@^1.0.30001219", "caniuse-lite@^1.0.30001228", "caniuse-lite@^1.0.30001264":
-  "integrity" "sha512-YzBnspggWV5hep1m9Z6sZVLOt7vrju8xWooFAgN6BA5qvy98qPAPb7vNUzypFaoh2pb3vlfzbDO8tB57UPGbtw=="
-  "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001265.tgz"
-  "version" "1.0.30001265"
+  "integrity" "sha512-Wd1OuggRzg1rbnM5hv1wXs2VkxJH/AA+LuudlIqvZiCvivF+wJJe2mgBZC8gPMgI7D76PP5CTx8Luvaqc1V6OQ=="
+  "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001306.tgz"
+  "version" "1.0.30001306"
 
 "capture-exit@^2.0.0":
   "integrity" "sha512-PiT/hQmTonHhl/HFGN+Lx3JJUznrVYJ3+AQsnthneZbvW7x+f08Tk7yLJTLEOUvBTbduLeeBkxEaYXUOUrRq6g=="
@@ -8244,9 +8244,9 @@
   "version" "2.15.0"
 
 "nanoid@^3.1.23":
-  "integrity" "sha512-dW2pUSGZ8ZnCFIlBIA31SV8huOGCHb6OwzVCc7A69rb/a+SgPBwfmLvK5TKQ3INPbRkcI8a/Owo0XbiTNH19wg=="
-  "resolved" "https://registry.npmjs.org/nanoid/-/nanoid-3.1.29.tgz"
-  "version" "3.1.29"
+  "integrity" "sha512-fmsZYa9lpn69Ad5eDn7FMcnnSR+8R34W9qJEijxYhTbfOWzr22n1QxCMzXLK+ODyW2973V3Fux959iQoUxzUIA=="
+  "resolved" "https://registry.npmjs.org/nanoid/-/nanoid-3.2.0.tgz"
+  "version" "3.2.0"
 
 "nanomatch@^1.2.9":
   "integrity" "sha512-fpoe2T0RbHwBTBUOftAfBPaDEi06ufaUai0mE6Yn1kacc3SnTErfb/h+X94VXzI64rKFHYImXSvdwGGCmwOqCA=="
