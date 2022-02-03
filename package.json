@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 6006",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -15,7 +15,7 @@
     "@reduxjs/toolkit": "^1.6.2",
     "@types/react-slick": "^0.23.7",
     "antd": "^4.16.13",
-    "next": "11.1.2",
+    "next": "12.0.10",
     "next-with-less": "^1.0.1",
     "react": "17.0.2",
     "react-alice-carousel": "^2.5.1",

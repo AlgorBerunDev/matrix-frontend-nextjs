@@ -14,6 +14,6 @@ module.exports = withLess({
     javascriptEnabled: true,
   },
   images: {
-    domains: ['matrix.texmart.uz'],
+    domains: ["backend.matrixfitness.uz"],
   },
 });
